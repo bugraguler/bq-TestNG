@@ -1,0 +1,96 @@
+*********TestNG**********
+TestNG is a testing tool that helps us to structure our test cases using different annotations
+
+Benefits of TestNG:
+1.Reports
+2.Annotations e.g. @Test, @before, @beforeclass
+3.Parallel testing
+4.Batch execution
+5.Assertions  -  Hard Assertions ,Soft Assertions
+6.Data Parameterizaiton
+
+it can be integrated with cucumber , maven and selenium
+
+1.Annotations:
+we do not need any main method
+annotation is a tag that provides additional information about class,interface or method in TestNG
+
+@Test
+@BeforeMethod
+@AfterMethod
+@BeforeClass
+@AfterClass
+
+1.@Test
+You should write your test cases under this annotation.
+This is the main annotation in TestNG
+By default testNG executes the methods in alphabetical order.(method names)
+
+2.@BeforeMethod
+Runs every time before the @Test is executed
+also called precondition
+
+3.@AfterMethod
+Runs every time after the @Test is executed
+also called post condition
+
+bbefore method is precondition that must run before every test case and the post condition will
+run after the test case has ended
+
+priority:
+by default the priority is zero of all the test case
+in order to give them a priority order
+use @Test(priority = 1)
+
+Enabled & Disabled
+@Test(enabled=false) --> will not run the test cases that are set false
+by default all test cases are set to enabled = true
+
+DependsOn
+@Test(dependsOnMethods = "methodName")
+will only run if the dependent method has passed successfully else it will be skipped
+
+HardAssertions:
+we have hardAssertions in testNG
+in order to use the assertion we use
+
+Assert.assertiontype()
+
+Assert.assertEquals(text,expectedText);
+it passes if text equals expectedText it fails if not!
+
+Assert.assertTrue(boolean variable)
+This assertion check state of the boolean variable
+it passes if the boolean is true
+it fails if the boolean is false
+
+In hard assertions if we have multiple assertions
+as soon as one of them fails it quits checking other assertions and declared the test case has failed
+
+SoftAssertions:
+SoftAssert softAssert = new SoftAssert();
+we should declare it first!!
+soft assertion continue to check all the assertions regardless of the fact even if one or more assertions
+have failed, which is not the scenario in case of Hard Assertions(they stop execution whenever one assertion fails)
+
+in order to use soft assertion***-->
+    1. Decleration:
+    SoftAssert softAssert = new SoftAssert();
+    softAssert. softAssert.assertTrue(displayed);
+    softAssert.assertEquals(text,expectedText);
+
+    2.at the end you must do
+    softAssert.assertAll();
+
+    ***note***
+    After the decleration when u use soft.assert it just checks the assertion but does not take any action or display any output
+    once all the assertion are done
+    then u use soft.assertall() to compile the result of all the assertion and show you the results on screen
+
+
+
+
+
+
+
+
