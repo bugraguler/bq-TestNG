@@ -1,0 +1,39 @@
+*********TestNG - 02**********
+testNG XML:
+gives u control over the execu
+<suite>
+        <test
+             <classes>
+                    <class>
+                            <methods>
+                                     <include name="cccfirstTest"/>
+                                     <include name="aaasecondTest"/>
+                                     <include name="bbbthirdTest"/>
+                            </methods>
+                    </class>
+             </classes>
+
+             <packages>
+             </packages>
+
+         </test>
+</suite>
+
+
+@BeforeClass:
+this annotation is used to execute the method only once before the execution of the class
+
+@AfterClass:
+this annotation is used to execute the method only once after the execution of the class
+
+@BeforeTest:
+this annotation is used to execute the method only once before the execution of the classes
+
+@AfterTest:
+this annotation is used to execute the method only once after the execution of the classes
+
+whenever we run by groups
+the @BeforeMethod and @AfterMethod do not run because they are not under the tag of groups
+
+when we run by method name
+the @BeforeMethod and @AfterMethod run

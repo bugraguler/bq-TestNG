@@ -7,12 +7,12 @@ import org.testng.annotations.Test;
 
 public class BasicAnotations {
 
-    @Test
+    @Test(groups = "smoke")
     public void cccfirstTest(){
         System.out.println("This is my first testcase");
 
     }
-    @Test
+    @Test(groups = "regression")
     public void aaasecondTest(){
         System.out.println("This is my second test");
     }

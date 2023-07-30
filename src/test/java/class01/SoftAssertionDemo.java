@@ -24,7 +24,7 @@ public class SoftAssertionDemo {
         driver.manage().window().maximize();
     }
 
-    @Test
+    @Test(groups = "regression")
     public void verifyCredentials() {
         SoftAssert softAssert = new SoftAssert();
         String expectedText = "Invalid credentials 123";
@@ -47,6 +47,11 @@ public class SoftAssertionDemo {
         softAssert.assertAll();
 
 
+    }
+
+    @Test(groups = "smoke")
+    public void loginTest2(){
+        System.out.println("ı am smoke test");
     }
 
     @AfterMethod

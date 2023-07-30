@@ -1,4 +1,4 @@
-*********TestNG**********
+*********TestNG - 01**********
 TestNG is a testing tool that helps us to structure our test cases using different annotations
 
 Benefits of TestNG:
@@ -34,7 +34,7 @@ also called precondition
 Runs every time after the @Test is executed
 also called post condition
 
-bbefore method is precondition that must run before every test case and the post condition will
+before method is precondition that must run before every test case and the post condition will
 run after the test case has ended
 
 priority:
