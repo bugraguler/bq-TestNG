@@ -16,7 +16,7 @@ public class SoftAssertionDemo {
 
     WebDriver driver;
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void openBrowser() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
@@ -43,7 +43,7 @@ public class SoftAssertionDemo {
         softAssert.assertTrue(displayed);
 
         //check all assertions
-        System.out.println("hi wrıl");
+        System.out.println("hi wrıld");
         softAssert.assertAll();
 
 
@@ -54,7 +54,7 @@ public class SoftAssertionDemo {
         System.out.println("ı am smoke test");
     }
 
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void closeBrowser() {
         driver.quit();
     }
